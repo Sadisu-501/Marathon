@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+/* General styles */
+body {
+  font-family: karla, sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: rgba(240, 240, 240);
+}
+/* card container and card contents */
+.card-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card-heading {
+  padding: 2rem;
+  background-color: hsl(204, 43%, 100%);
+  background-color: #fff;
+}
+.card-heading h1 {
+  color: hsl(179, 61%, 44%);
+}
+.card-heading :nth-child(2) {
+  color: hsl(71, 73%, 54%);
+  font-size: 1.2rem;
+}
+.card-heading :nth-child(3),
+.card-heading :nth-child(4) {
+  color: hsl(218, 22%, 67%);
+}
+.card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+.card {
+  height: auto;
+  background-color: hsl(179, 61%, 44%);
+  padding: 1rem;
+  color: white;
+}
+.card-2 {
+  background-color: hsl(181, 54%, 68%);
+}
+.sub-info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.sub-info p:nth-child(1) {
+  font-size: 25px;
+}
+.sub-info p:nth-child(2) {
+  color: hsl(204, 43%, 93%);
+  opacity: 0.7;
+}
+.last-p {
+  color: hsl(204, 43%, 93%);
+}
+.card button {
+  width: 70%;
+  background-color: hsl(71, 73%, 54%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.card button:hover {
+  background-color: hsl(71, 82%, 39%);
+  transition: all 0.5s ease;
+}
+/* second card styles */
+.card-2 p {
+  color: hsl(204, 43%, 93%);
+  opacity: 0.9;
+  line-height: 15px;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .card-body {
+    grid-template-columns: 1fr;
+  }
+  .card button {
+    width: 80%;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card button {
+    width: 100%;
+    padding: 0.6rem;
+  }
+  .card-heading h1 {
+    font-size: 1.3rem;
+  }
+  .card-heading :nth-child(2) {
+    font-size: 1.125rem;
+  }
+  .card-heading :nth-child(3),
+  .card-heading :nth-child(4) {
+    font-size: 0.875rem;
+  }
+
+  .sub-info p:nth-child(1) {
+    font-size: 20px;
+  }
+  .sub-info p:nth-child(2) {
+    font-size: 0.875rem;
+  }
+  .last-p {
+    font-size: 0.875rem;
+  }
+}
