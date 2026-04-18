@@ -16,6 +16,8 @@ body {
 }
 .hero-wrapper {
   background-image: url(images/bg-header-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 50vh;
   display: flex;
@@ -26,13 +28,18 @@ body {
   color: var(--light-gray);
   /* flex-wrap: wrap; */
 }
-
-.hero-wrapper p {
+.hero-wrapper img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+.hero-wrapper p,
+.sub-header p {
   color: var(--dark-gray);
   max-width: 53ch;
   text-align: center;
   margin-top: 1rem;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 /* hero call to action buttons */
 .hero-cta {
@@ -58,7 +65,21 @@ body {
 }
 /* button active states */
 .cta-1:hover {
-  box-shadow: hsl(171, 66%, 44%) 0px 20px 100px 0px;
-  /* transform: scale(0.96); */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.cta-2:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* sub header */
+.sub-header {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-gray);
+}
+.sub-header p {
+  max-width: 58ch;
 }
