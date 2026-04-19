@@ -10,11 +10,23 @@
   --light-gray: hsl(210, 10%, 33%);
   --dark-gray: hsl(201, 11%, 66%);
 }
+/* general styles */
 body {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 18px;
 }
 
+p {
+  font-size: 13px;
+  color: var(--dark-gray);
+}
+h4 {
+  color: var(--light-gray);
+}
+h3 {
+  color: var(--light-gray);
+  font-size: 15px;
+}
 .hero-wrapper {
   background-image: url(images/bg-header-desktop.png);
   background-size: cover;
@@ -39,7 +51,6 @@ body {
   max-width: 53ch;
   text-align: center;
   margin-top: 1rem;
-  font-size: 14px;
   line-height: 1.5;
 }
 /* hero call to action buttons */
@@ -117,7 +128,6 @@ body {
   color: var(--light-gray);
   margin-top: 0.5rem;
   line-height: 1.5;
-  font-size: 14px;
   max-width: 33ch;
 }
 
@@ -138,4 +148,27 @@ body {
 }
 .content2-container p {
   max-width: 60ch;
+}
+
+/* workflow section */
+.workflow-container {
+  margin: 100px;
+}
+.workflow-contents-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.workflow-heading,
+.workflow-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.workflow-heading {
+  margin-bottom: 1rem;
 }
