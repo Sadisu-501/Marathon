@@ -13,7 +13,6 @@ body {
 .navbar {
   background-color: rgb(235, 231, 254);
   padding: 0.5rem 1rem;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -37,12 +36,13 @@ body {
   gap: 3rem;
   transition: all 0.5s ease;
   font-weight: 400;
+  font-family: "Geist Mono";
+  /* font-weight: 900; */
 }
 
 .nav-links a {
   text-decoration: none;
   color: black;
-  font-weight: 500;
 }
 .nav-links a:hover {
   color: #747171;
@@ -61,6 +61,14 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+/* toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 /* HERO SECTION*/
 .hero {
   padding: 2rem;
@@ -69,7 +77,11 @@ body {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 5.5rem;
+  font-weight: 900;
+  padding-top: 100px;
+  font-family: "Geist";
+  font-style: normal;
   font-weight: 900;
 }
 
@@ -96,7 +108,8 @@ body {
 
 .split h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 200px;
+  font-family: "Geist";
 }
 
 .split a {
@@ -127,16 +140,25 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.box h3 {
+  margin-bottom: 200px;
+  font-size: 1.5rem;
+  font-family: "Geist";
+  font-weight: 900;
+}
 
 /* community styles */
 .community {
   border-top: 1px solid #aaa;
+  font-family: "Geist";
 }
 
 .community h1 {
-  font-size: 3rem;
+  font-size: 5.5rem;
   padding: 2rem;
   border-bottom: 1px solid #aaa;
+  font-family: Geist;
+  font-weight: 900;
 }
 
 .community span {
@@ -150,6 +172,7 @@ body {
 
 .left {
   background: #d9d3e8;
+  font-family: "Geist";
 }
 
 .left h2 {
@@ -157,11 +180,12 @@ body {
   border-bottom: 1px solid #aaa;
   font-size: 2rem;
   font-weight: 800;
+  max-width: 16ch;
 }
 .left h4 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 800;
 }
 .item {
   padding: 1.5rem 2rem;
@@ -191,7 +215,7 @@ body {
 
 /* CTA SECTION */
 .cta {
-  height: 80vh;
+  height: 70vh;
   background-color: #6c2be4;
   display: flex;
   justify-content: center;
@@ -207,12 +231,14 @@ body {
   font-size: 14px;
   letter-spacing: 2px;
   margin-bottom: 20px;
+  font-family: "Geist Mono";
 }
 
 .cta-title {
   font-size: 2.5rem;
   font-weight: 900;
   margin-bottom: 30px;
+  font-family: "Geist";
 }
 
 .cta-btn {
@@ -224,6 +250,7 @@ body {
   cursor: pointer;
   letter-spacing: 1px;
   transition: 0.3s ease;
+  font-family: "Geist";
 }
 
 .cta-btn:hover {
@@ -233,7 +260,6 @@ body {
 }
 
 /* footer styles */
-
 .footer {
   background: rgb(235, 231, 254);
   padding: 3rem 2rem;
@@ -260,21 +286,26 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  font-family: "Geist";
+  font-weight: 800;
 }
 
 .footer-col h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   font-family: "inter";
-  font-weight: 900;
 }
 
 .footer-col p {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
-  font-weight: 800;
 }
-
+.duration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
 /* SOCIAL LINKS */
 .footer-col a {
   display: block;
@@ -282,45 +313,85 @@ body {
   color: black;
   text-decoration: underline;
   font-size: 0.8rem;
-  font-weight: 800;
+  transition: all 0.3s ease;
+}
+.footer-col a:hover {
+  color: #aaa;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* RESPONSIVE DESIGN */
+@media (max-width: 798px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background: rgb(235, 231, 254);
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    display: none;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid #aaa;
+    font-size: 2rem;
+  }
+  .nav-links button {
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hero h1,
+  .community h1 {
+    font-size: 2rem;
+  }
+  .left h2 {
+    font-size: 1.5rem;
+  }
+  .split {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .community-grid {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .view {
+    text-align: center;
+  }
+  .view a:hover {
+    padding: 1rem 8rem;
+  }
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
   }
-
-  .footer-brand {
-    font-size: 2rem;
-  }
-
   .footer-content {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .split {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .community-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
   }
 }

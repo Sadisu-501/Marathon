@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Primal Training</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -14,7 +19,11 @@
         <div class="logo">
           <img src="images/logo.png" alt="" />
         </div>
-
+        <div class="menu-toggle" id="menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path id="menu-path" d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path>
+          </svg>
+        </div>
         <nav class="nav-links">
           <a href="#">HOME</a>
           <a href="#">ABOUT</a>
@@ -45,12 +54,12 @@
     <section class="section grid-3">
       <div class="box">
         <h3>GUIDED BY EXPERTS</h3>
-        <p>We believe in creating a positive environment where you can thrive.</p>
+        <p>We believe in creating a positive environment where you can thrive. We're here to help you achieve your goals and unlock your full potentials.</p>
       </div>
 
       <div class="box">
         <h3>DYNAMIC OPEN GYM</h3>
-        <p>Fully equipped with top-of-the-line tools and functional training areas.</p>
+        <p>Our Facility is the optimal environment for strenght training and performance, fully equipped with top-of-the-line tools, ample training areas and a focus on functional movement.</p>
       </div>
 
       <div class="image">
@@ -64,7 +73,7 @@
 
       <div class="community-grid">
         <div class="left">
-          <h2>DISCOVER YOUR <br> POTENTIAL</h2>
+          <h2>DISCOVER YOUR POTENTIAL</h2>
 
           <div class="item">
             <h4>EXPERT COACHING</h4>
@@ -125,10 +134,21 @@
 
         <div class="footer-col">
           <h3>OPENING HOURS</h3>
-          <p>MON – FRI &nbsp;&nbsp;&nbsp;&nbsp; 5:00 – 23:00</p>
-          <p>SATURDAYS &nbsp;&nbsp; 8:00 – 16:00</p>
-          <p>SUNDAYS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8:00 – 13:00</p>
-          <p>HOLIDAYS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8:00 – 16:00</p>
+
+          <div class="duration">
+            <div class="days">
+              <p>MON – FRI</p>
+              <p>SATURDAYS</p>
+              <p>SUNDAYS</p>
+              <p>HOLIDAYS</p>
+            </div>
+            <div class="time">
+              <p>5:00 – 23:00</p>
+              <p>8:00 – 16:00</p>
+              <p>8:00 – 13:00</p>
+              <p>8:00 – 16:00</p>
+            </div>
+          </div>
         </div>
 
         <div class="footer-col">
