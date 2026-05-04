@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "inter", sans-serif; */
   background-color: #0d2a3b;
   /* background-color: rgb(202, 197, 200); */
   color: #fff;
@@ -30,8 +30,11 @@ body {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
 }
+
 .advice-id {
   color: #0d2a3b;
+  font-family: cursive;
+  font-size: 0.8rem;
 }
 
 .card-details p {
@@ -64,6 +67,6 @@ svg:hover {
 
 @media (min-width: 729px) {
   .card-body {
-    max-width: 400px;
+    max-width: 500px;
   }
 }
