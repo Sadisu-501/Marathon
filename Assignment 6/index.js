@@ -17,3 +17,4 @@ toggle.addEventListener("click", () => {
     path.setAttribute("d", plusIcon);
   }
 });
+

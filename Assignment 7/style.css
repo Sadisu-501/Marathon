@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0d2a3b;
+  /* background-color: rgb(202, 197, 200); */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-body {
+  background-color: #3d718f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  line-height: 1.5;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+}
+.advice-id {
+  color: #0d2a3b;
+}
+
+.card-details p {
+  font-size: 1rem;
+  text-transform: capitalize;
+  max-width: 30ch;
+}
+
+.dice-btn {
+  background-color: #0d2a3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+.dice-btn:hover {
+  background-color: #033452;
+}
+svg {
+  fill: #fff;
+  transition: all 0.3s ease;
+}
+svg:hover {
+  fill: #3d718f;
+  transform: rotate(180deg) scale(1.05);
+}
+
+@media (min-width: 729px) {
+  .card-body {
+    max-width: 400px;
+  }
+}
