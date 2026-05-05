@@ -4,10 +4,9 @@
   box-sizing: border-box;
 }
 body {
-  /* font-family: "inter", sans-serif; */
+  font-family: "inter", sans-serif;
   background-color: #0d2a3b;
-  /* background-color: rgb(202, 197, 200); */
-  color: #fff;
+  color: #eae3e3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +18,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
   border-radius: 8px;
   padding: 2rem;
@@ -33,25 +31,28 @@ body {
 
 .advice-id {
   color: #0d2a3b;
-  font-family: cursive;
+  font-family: "Courier New", Courier, monospace;
   font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .card-details p {
   font-size: 1rem;
   text-transform: capitalize;
-  max-width: 30ch;
+  max-width: 32ch;
+  margin-bottom: 2rem;
 }
 
 .dice-btn {
   background-color: #0d2a3b;
   color: #fff;
-  border: none;
+  border: 1px solid #3d718f;
   cursor: pointer;
-  width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1.5rem;
   border-radius: 18px;
   transition: all 0.3s ease;
+  position: absolute;
+  bottom: -1.2rem;
 }
 .dice-btn:hover {
   background-color: #033452;
@@ -60,11 +61,12 @@ svg {
   fill: #fff;
   transition: all 0.3s ease;
 }
-svg:hover {
+.dice-btn:hover svg {
   fill: #3d718f;
   transform: rotate(180deg) scale(1.05);
 }
 
+/* media queries */
 @media (min-width: 729px) {
   .card-body {
     max-width: 500px;
