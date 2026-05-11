@@ -1,18 +1,25 @@
 const id = document.getElementById("id");
-const advice = document.getElementById("advice");
+const jokes = document.getElementById("jokes");
 const diceBtn = document.getElementById("diceBtn");
 
-async function getAdvice() {
+async function getJoke() {
   try {
-    const response = await fetch("https://api.adviceslip.com/advice");
+    const response = await fetch("https://v2.jokeapi.dev/joke/Any");
     // console.log(response);
     const data = await response.json();
     console.log(data);
-    id.textContent = `ADVICE #${data.slip.id}`;
-    advice.textContent = `"${data.slip.advice}"`;
+
+    id.textContent = `JOKE #${data.id || "Random"}`;
+    jokes.textContent = `"${data.joke}"`;
+    // Handle single or two-part jokes
+    if (data.type === "single") {
+      jokes.textContent = `"${data.joke}"`;
+    } else {
+      jokes.textContent = `"${data.setup} - ${data.delivery}"`;
+    }
   } catch (error) {
-    advice.textContent = "Something went wrong. Please try again later.";
+    jokes.textContent = "Something went wrong. Please try again later.";
   }
 }
-getAdvice();
-diceBtn.addEventListener("click", getAdvice);
+getJoke();
+diceBtn.addEventListener("click", getJoke);
